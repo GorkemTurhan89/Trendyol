@@ -41,7 +41,7 @@ public class Driver {
                     WebDriverManager.chromedriver().setup();
                     driver = new ChromeDriver(new ChromeOptions().addArguments("--remote-allow-origins=*"));
                     break;
-            } driver.manage().window().fullscreen();
+            }  driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
         return driver;

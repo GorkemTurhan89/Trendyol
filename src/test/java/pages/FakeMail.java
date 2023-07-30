@@ -10,10 +10,10 @@ public class FakeMail {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(css = "span#email.animace")
+    @FindBy(xpath = "//span[@id='email']")
     public WebElement emailFakeMail;
 
-    @FindBy(xpath = "//p/span[@id='hesloGen']")
+    @FindBy(xpath = "//span[@id='hesloGen']")
     public WebElement passwordFakeMail;
 
     @FindBy(xpath = "(//tbody[@id='schranka' ]/tr)[1]")
@@ -25,7 +25,8 @@ public class FakeMail {
     @FindBy(xpath = "//a[@title='Delete this email address']")
     public WebElement deleteEmail;
 
-
+    @FindBy(css = "span#predmet")
+    public WebElement subjectRowOfLastFakeMail;
 
 
 }

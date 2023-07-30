@@ -11,16 +11,28 @@ public class HomePage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
-    @FindBy(xpath = "//p[text()='Giriş Yap']")
+    @FindBy(xpath = "//p[text()='Giriş Yap']//ancestor::div[1]")
     public WebElement homepageGirisYapButton;
 
     @FindBy(xpath = "//button/span[text()='Üye Ol']")
     public WebElement homepageUyeOlButton;
 
     @FindBy(css = "input#register-email")
-    public WebDriver registryPageEmailBox;
+    public WebElement registryPageEmailBox;
 
     @FindBy(css = "   input#register-password-input")
-    public WebDriver registryPagePasswordBox;
+    public WebElement registryPagePasswordBox;
+
+    @FindBy(css = ".marketing-checkbox .ty-bg-beige")
+    public WebElement campaignAcknowlegmentConfimationCheck;
+
+    @FindBy(css = ".personal-checkbox .ty-bg-beige")
+    public WebElement personalDataSavedCheck;
+
+    @FindBy(css = ".recaptcha-checkbox-border")
+    public WebElement captchaHome;
+
+    @FindBy(xpath = "//button[@type='submit']")
+    public WebElement UyeOlButton;
 
 }
