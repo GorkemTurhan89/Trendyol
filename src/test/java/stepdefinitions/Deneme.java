@@ -24,5 +24,5 @@ public class Deneme {
                 JavascriptExecutor js = (JavascriptExecutor)Driver.getDriver();
         js.executeScript("arguments[0].click();",element );
         System.out.println(element.getText());
-    }
+    }//
 }
